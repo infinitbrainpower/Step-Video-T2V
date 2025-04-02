@@ -1,4 +1,4 @@
-import torch.distributed as dist
+import torch.distributed as dist # type: ignore
 import xfuser
 import torch
 
