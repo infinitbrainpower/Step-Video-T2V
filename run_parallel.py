@@ -1,11 +1,11 @@
 from stepvideo.diffusion.video_pipeline import StepVideoPipeline
-import torch.distributed as dist
-import torch
+import torch.distributed as dist # type: ignore
+import torch # type: ignore
 from stepvideo.config import parse_args
 from stepvideo.parallel import initialize_parall_group, get_parallel_group
 from stepvideo.utils import setup_seed
-from xfuser.model_executor.models.customized.step_video_t2v.tp_applicator import TensorParallelApplicator
-from xfuser.core.distributed.parallel_state import get_tensor_model_parallel_world_size, get_tensor_model_parallel_rank
+from xfuser.model_executor.models.customized.step_video_t2v.tp_applicator import TensorParallelApplicator # type: ignore
+from xfuser.core.distributed.parallel_state import get_tensor_model_parallel_world_size, get_tensor_model_parallel_rank # type: ignore
 
 if __name__ == "__main__":
     args = parse_args()
