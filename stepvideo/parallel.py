@@ -1,6 +1,6 @@
 import torch.distributed as dist # type: ignore
-import xfuser
-import torch
+import xfuser # type: ignore
+import torch # type: ignore
 
 
 def initialize_parall_group(ring_degree, ulysses_degree, tensor_parallel_degree):
